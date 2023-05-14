@@ -16,6 +16,9 @@ export default function Page() {
   }
   return (
     <>
+
+        <h1>Protected Page</h1>
+        <h4>Welcome {session.user.name} </h4>
       Signed in as {session.user.email} <br/>
       <button onClick={() => signOut()}>Sign out</button>
     </>
