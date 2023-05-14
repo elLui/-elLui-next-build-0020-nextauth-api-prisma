@@ -17,8 +17,10 @@ export async function POST(request: Request) {
             email: body.email,
             password: await bcrpyt.hash(body.password, 10),
         },
-    })
+    });
+
     const { password, ...result } = user;
+
     return new Response(JSON.stringify(result));
 
 
